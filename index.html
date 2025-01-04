@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Builder</title>
+    <link rel="stylesheet" href="resume.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.js"></script>
+</head>
+
+<body>
+    <div class="container resumeBox">
+        <div class="rsInput">
+            <div class="profiledetails">
+                <h4>Personal details</h4>
+                <div class="profileInputs">
+
+                    <div>
+                        <label for="name">Full Name</label><br>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div>
+                        <label for="email">Email</label><br>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div>
+                        <label for="contact">Mobile Number</label><br>
+                        <input type="text" id="contact" name="contact" required>
+                    </div>
+                    <div>
+                        <label for="jobtitle">Job Title</label><br>
+                        <input type="text" id="jobtitle" name="jobtitle" required>
+                    </div>
+                    <div>
+                        <label for="experinence">Experience</label><br>
+                        <input type="text" id="experinence" name="experinence" required>
+                    </div>
+                    <div>
+                        <label for="city">Current City</label><br>
+                        <input type="text" id="city" name="city" required>
+                    </div>
+                    <div>
+                        <label for="country">Country</label><br>
+                        <input type="text" id="country" name="country" required>
+                    </div>
+                    
+                </div>
+                <button type="button" class="UpdateBtn" onclick="updateDetails()">Update</button>
+            </div>
+
+            <div class="rsSkils">
+                <h4>Key skills</h4>
+                <p class="rspara">Recruiters look for candidates with specific skills. Add them here to stand out as a
+                    candidate.</p>
+                <div class="rsSkilInput">
+                    <input type="text" id="skillsInput" placeholder="Eg. Python, Java">
+                    <button class="rsSkilBtn" onclick="updateSkills()">Update</button>
+                </div>
+            </div>
+
+            <div class="rsProfileSummary">
+                <h4>Profile Summary</h4>
+                <p class="rspara">Add a summary that gives an overview of your resume, highlighting your professional
+                    background</p>
+                <div class="rsProfileSummaryInput">
+                    <textarea name="ProfileSummary" cols="" id="ProfileSummary"
+                        placeholder="write 1000 words..."></textarea>
+                    <br>
+                    <button class="UpdateBtn" onclick="updateProfileSummary()">Update</button>
+                </div>
+            </div>
+
+            <div class="rsEducation">
+                <h4>Education</h4>
+                <p class="rspara">Adding your educational details help recruiters know your value as a potential
+                    candidate</p>
+                <div class="rsEducationInputs">
+                    <div>
+                        <label for="">Course name</label>
+                        <input type="text" id="courseName" placeholder="Eg. BE, ME, B.Sc, MCA...">
+                    </div>
+                    <div>
+                        <label for="">Specialisation</label>
+                        <input type="text" id="specialisation" placeholder="Eg. EEE, CS, Civil">
+                    </div>
+
+                    <div>
+                        <label for="">University/Institute</label>
+                        <input type="text" id="university" placeholder="">
+                    </div>
+
+                    <div>
+                        <label for="">Passing out year</label>
+                        <input type="text" id="passingYear" placeholder="Eg. 2024">
+                    </div>
+
+                    <div>
+                        <label for="">Percentage</label>
+                        <input type="text" id="percentage" placeholder="">
+                    </div>
+
+                    <div>
+                        <label for="">Course type</label>
+                        <input type="text" id="courseType" placeholder="Eg. Full-time, Part-time, Correspondence">
+                    </div>
+                </div>
+                <button onclick="addEducationDetails()" class="EducationInputBtn">Add</button>
+            </div>
+
+            <div class="rsProjects">
+                <h4>Project</h4>
+                <p class="rspara">Showcase your talent with the projects you have worked on during college and work</p>
+                <div class="rsProjectsInput">
+                    <div>
+                        <label for="">Project Title</label>
+                        <input id="projectTitle" type="text">
+                    </div>
+                    <div>
+                        <label for="">Project Duriation</label>
+                        <input id="projectDuration" type="text">
+                    </div>
+                    <div class="projectDes">
+                        <label for="">Project description</label>
+                        <textarea name="ProjectsInput" cols="" id="projectDescription" 
+                            placeholder="write 1000 words..."></textarea>
+                    </div>
+
+                </div>
+                <button class="ProjectsInputBtn" onclick="addProject()">Add Project</button>
+            </div>
+
+            <div class="rsLH">
+                <div>
+                    <h4>Certification</h4>
+                    
+                    <div class="rsProjectsInput">
+                        <div>
+                            <label for="">Certificate name</label>
+                            <input id="certificateName"  type="text">
+                        </div>
+                        <div>
+                            <label for="">Issued Date</label>
+                            <input id="issuedDate" type="text">
+                        </div>
+                    </div>
+                    <button onclick="updateCertificate()" class="UpdateBtn">update</button>
+                </div>
+            </div>
+            
+
+            <div class="rsLH">
+                <div>
+                    <h4>Language</h4>
+                    <p class="rspara">Add languages that you can read, write and speak, (seperate them with a comma)</p>
+                    <div class="rsProjectsInput">
+                        <div>
+                            <label for="">Language</label>
+                            <input id="languageInput" type="text" placeholder="Eg. Tamil, English">
+                        </div>
+                    </div>
+                    <button onclick="updateLanguages()" class="UpdateBtn">update</button>
+                </div>
+
+                <div>
+                    <h4>Hobbies</h4>
+                    <p class="rspara">(Max 3, seperate them with a comma)</p>
+                    <div class="rsProjectsInput">
+                        <div>
+                            <label for="">Hobbies</label>
+                            <input id="hobbiesInput" type="text">
+                        </div>
+                    </div>
+                    <button onclick="updateHobbies()" class="UpdateBtn">Update</button>
+                </div>
+            </div>
+
+        </div>
+        <div class="rspreview">
+            <div class="rsPVcontext">
+                <h4>Resume Preview</h4>
+                <button id="download">Download</button>
+            </div>
+            <div id="resumePreview" class="resumePreview">
+                <div class="rshead">
+                    <div class="rsh1">
+                        <span class="rsName rsH1">Name</span>
+                        <p class="rsTitle rsH1">Job Title</p>
+                    </div>
+                    <div class="rsh2">
+                        <div class="rshcontext">
+                            <p class="phone"><span class="rsH3">Phone</span><span id="rsH3-phone"></span></p>
+                            <p class="email"><span class="rsH3">Email</span><span id="rsH3-email"></span></p>
+                            <p class="location"><span class="rsH3">Location</span><span id="rsH3-location"></span></p>
+                            <p class="experience"><span class="rsH3">Experience</span><span id="rsH3-experience"></span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="rsbody">
+                    <div class="rsB1">
+                        <div class="rsBSkill">
+                            <h6 class="rsH2">Key Skills</h6>
+                            <ul class="rsSkills">
+                                
+                            </ul>
+                        </div>
+                        <div class="rsBSkill">
+                            <h6 class="rsH2">Languages</h6>
+                            <ul class="rsLanguages">
+                                
+                            </ul>
+                        </div>
+                        <div class="rsBSkill">
+                            <h6 class="rsH2">Certification</h6>
+                            <div class="rsCertificate">
+                                
+                            </div>
+                        </div>
+                        <div class="rsBSkill">
+                            <h6 class="rsH2">Hobbies</h6>
+                            <ul class="rsHobbies">
+                                
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="rsB2">
+                        <div class="rsBprofileSummary">
+                            <h6 class="rsH2">Profile Summary</h6>
+                            <p class="rsBpara"></p>
+                        </div>
+                        <div class="rsBEducation">
+                            <h6 class="rsH2">Education</h6>
+                            <div id="educationList">
+                                
+                            </div>
+
+                           
+                        </div>
+
+                        <div class="rsBProject">
+                            <h6 class="rsH2">Projects</h6>
+                            <div id="projectList">
+                                
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="resume.js">
+
+    </script>
+</body>
+
+</html>

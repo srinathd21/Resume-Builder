@@ -1,0 +1,286 @@
+:root{
+    --lineColor: rgb(222, 222, 222);
+    --shadow:rgb(215, 215, 215);
+    --btncolor: #275df5;
+    --text: rgb(84, 84, 84);
+    --textsize: 12px;
+}
+*{
+    padding: 0px;
+    margin: 0px;
+}
+.resumeBox{
+    position: relative;
+    display: flex;
+}
+.resumeBox>div{ 
+    margin: 3px; 
+}
+.rspreview{
+    width: 39%;
+    
+    min-width: 450px;
+    height: 610px !important;
+    position: sticky !important;;
+    top: 10px;
+    background-color: white;
+}
+.rsInput{
+    width: 60%;
+}
+.rsPVcontext{
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.resumePreview{
+    width: 100%;
+    height: 88%;
+    border-radius: 10px;
+    overflow: auto;
+    box-shadow:  1px 1px 10px var(--shadow);
+}
+label{
+    margin-bottom: 6px;
+}
+input{
+    width: 90%;
+    border-radius: 14px;
+    border: none;
+    border: 1px solid var(--lineColor);
+    padding: 10px;
+    outline: none;
+    font-size: 13px;
+}
+.rsPVcontext button{
+    background-color: var(--btncolor);
+    color: white;
+    padding: 5px 20px;
+    border: none;
+    border-radius: 20px;
+}
+
+.rsInput>div{
+    border-radius: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 1px 1px 10px var(--shadow);
+    margin-bottom: 20px;
+}
+
+
+.profiledetails{
+    background-color: white;
+    
+}
+.profileInputs{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+.profileInputs label{
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.profileInputs div{
+    margin-bottom: 25px;
+}
+.rsSkilInput{
+    border: 1px solid var(--lineColor);
+    padding: 5px 50px 5px 10px;
+    border-radius: 13px;
+    position: relative;
+}
+.rsSkilInput input{
+    position: relative;
+    width: 90%;
+    border: none;
+    outline: none;
+}
+.rshcontext [id^='rsH3']{
+    color: var(--text);
+    font-size: 12px;
+   
+    margin-left: 5px;
+}
+.rsSkilInput button{
+    position: absolute;
+    right: 10px;
+    bottom: 13px;
+    padding: 4px 15px;
+    border-radius: 20px;
+    background-color: blue;
+    border: none;
+    font-size: 12px;
+    color: white;
+}
+.rsProfileSummaryInput textarea{
+    width: 98%;
+    border: none;
+    outline: none;
+    border: 1px solid var(--lineColor);
+    border-radius: 10px;
+    padding: 10px;
+    height: 100px;
+}
+.ProfileSummaryBtn, .ProjectsInputBtn, .EducationInputBtn, .UpdateBtn{
+    background-color: #275df5;
+    color: white;
+    padding: 8px 25px;
+    border: none;
+    font-size: 12px;
+    border-radius: 20px;
+    margin-top: 10px;
+    
+}
+#ProjectsInput,#projectDescription  {
+    width: 98%;
+    border: none;
+    outline: none;
+    border: 1px solid var(--lineColor);
+    border-radius: 10px;
+    padding: 10px;
+    height: 100px;
+}
+
+.rsProjectsInput, .rsEducationInputs{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 20px;
+}
+.projectDes{
+    grid-column: 1/4;
+}
+.rsLH{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10px;
+}
+.rshead{
+    display: grid;
+    grid-template-columns: 48% 50%;
+    padding: 5px;
+}
+
+.rsh1{
+    padding: 50px 10px 20px 10px;
+    box-sizing: border-box !important;
+}
+.rsName{
+    color: blue;
+   
+}
+.rsh1{
+    border-right: 1px solid rgb(0, 0, 0);
+}
+.rsH1{
+    font-size: 22px;
+    font-weight: 500;
+    
+}
+.rsH2{
+    font-size: 15px !important;
+}
+.rsH3{
+    font-size: 12px;
+    font-weight: 500;
+    border-right: 2px solid rgb(0, 0, 0);
+    display: inline-block;
+    width: 66px;
+    margin: 0px;
+    padding: 3px 0px;
+}
+#rsH3{
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.rshcontext{
+    line-height: 0px;
+    position: relative;
+    left: -10px;
+    top: 35px;
+    padding: 5px 0px 1px;
+    background-color: white !important;
+}
+.rsbody{
+    display: flex;
+}
+.rsbody h6{
+    font-size: 12px;
+}
+
+.rsbody>div{
+  
+    margin-top: 10px !important;
+}
+.rsB1{
+    width:35% ;
+    margin-right: 20px;
+    border-top: 7px solid blue !important;
+    padding: 10px 0px 10px 20px;
+}
+.rsB2{
+    width:57% ;
+    padding: 0px 0px 10px 5px;
+    position: relative;
+    top:-5px;
+}
+.rsSkills,.rsHobbies,.rsLanguages{
+    font-size: var(--textsize);
+    padding: 0px;
+    margin-left: 13px;
+    line-height: 25px;
+}
+.rsBprofileSummary p{
+    font-size:var(--textsize);
+    line-height: 15px;
+    color: var(--text);
+}
+.rsbody #rsH3::before{
+    content: '';
+    display: inline-block;
+    height: 8px;
+    width: 3px;
+    background-color: blue;
+    position: relative;
+    left: -6px;
+}
+.rsEducationContext,.rsProjectContext{
+    position: relative;
+}
+
+.remove-btn{
+    position: absolute;
+    top: -3px;
+    right: 30px;
+    height: 15px;
+    width: 15px;
+    font-size: 10px;
+    border: none;
+    background: white;
+    box-shadow: 1px 1px 10px var(--shadow);
+    color: red;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.rsEducationContext p, .rsProjectContext p{
+    padding-left: 8px;
+    line-height: 2px;
+}
+.rsEdYear, .rsPjd{
+    font-size: 12px;
+    color: var(--text);
+}
+.rsEdclg, .rsPjtext{
+    font-size: 12px;
+    color: var(--text);
+}
+.rsEdGrade{
+    font-size: 11px;
+    color: var(--text);
+}
+.rsPjtext{
+    line-height: 15px !important;
+}
