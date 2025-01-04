@@ -247,7 +247,7 @@ input{
     position: relative;
     left: -6px;
 }
-.rsEducationContext,.rsProjectContext{
+.rsEducationContext,.rsProjectContext,.rsCertificate{
     position: relative;
 }
 
