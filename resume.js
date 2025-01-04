@@ -213,7 +213,9 @@ window.onload = function () {
     document.getElementById("download")
         .addEventListener("click", () => {
             var xbtn = document.querySelector(".remove-btn");
-            xbtn.style.visibility = "hidden";
+            if (xbtn){
+                xbtn.style.visibility = "hidden";
+            }
             const invoice = this.document.getElementById("resumePreview");
             console.log(invoice);
             console.log(window);
